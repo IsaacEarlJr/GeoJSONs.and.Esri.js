@@ -41,11 +41,7 @@
           zoom: 7
         });
 
-        var urls = [
-      "https://earthquake.usgs.gov/earthquakes/feed/v1.0/summary/all_month.geojson",
 
-      // Add more URLs here
-    ];
 
     urls.forEach(function(url) {
       var layer = new FeatureLayer({
@@ -127,7 +123,7 @@ view.ui.move("zoom", "bottom-left");
 
 
         var urls = [
-          "https://earthquake.usgs.gov/earthquakes/feed/v1.0/summary/all_month.geojson",
+          "https://earthquake.usgs.gov/earthquakes/feed/v1.0/summary/all_month.geojson"
         ];
 
         // Loop through the URLs and add a layer for each (layers loaded from my GIS project)
