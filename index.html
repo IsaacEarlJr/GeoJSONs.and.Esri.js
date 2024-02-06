@@ -40,8 +40,6 @@
 
 
     
-
-
     <script>
       require([
         "esri/config", 
@@ -49,7 +47,9 @@
         "esri/views/MapView",
         "esri/layers/FeatureLayer",
         "esri/layers/GeoJSONLayer"
-      ], function(esriConfig, Map, MapView, FeatureLayer, GeoJSONLayer) {
+      ], 
+      
+      function(esriConfig, Map, MapView, FeatureLayer, GeoJSONLayer) {
 
         esriConfig.apiKey = "AAPK220ba579086140dea4e25f522bf00c8bG3Mb_Pd1g_KKKi94wj2H2lL_ceoaHcU25yTWEgLu20jkuceWo9_tPekrNz5Yr-nu";
 
@@ -102,17 +102,13 @@ view.ui.move("zoom", "bottom-left");
           document.getElementById('layerControl').appendChild(label);
           document.getElementById('layerControl').appendChild(document.createElement('br'));
         });
+      
+      
+      
       });
 
 
-
-      require(["esri/Map", "esri/layers/GeoJSONLayer", "esri/views/MapView"], (
-      Map,
-      GeoJSONLayer,
-      MapView
-    ) => {
-      // If GeoJSON files are not on the same domain as your website, a CORS enabled server
-      // or a proxy is required.
+      
       const url = "https://earthquake.usgs.gov/earthquakes/feed/v1.0/summary/all_month.geojson";
 
       // Paste the url into a browser's address bar to download and view the attributes
@@ -182,9 +178,9 @@ view.ui.move("zoom", "bottom-left");
         zoom: 2,
         map: map
       });
-    });
+   
 
-    
+      
     </script>
   
 </head>
